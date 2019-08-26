@@ -11,6 +11,11 @@
 |
 */
 
+use App\Http\Controllers\ProductsController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/products/{product}', [ProductsController::class, 'show']);
